@@ -36,7 +36,9 @@ function JobDetails() {
         <p><span style={{fontWeight:"bold" ,fontSize:"2rem"}}>Description:</span><span style={{marginLeft:"2rem",fontSize:"1.2rem" ,fontWeight:"light"}}>{job.description}</span> </p>
         <p><span style={{fontWeight:"bold" ,fontSize:"2rem"}}>Posted On:</span><span style={{marginLeft:"2rem",fontSize:"1.2rem",fontWeight:"light" }}>{job.jobPostedOn}</span> </p>
         <p><span style={{fontWeight:"bold" ,fontSize:"2rem"}}>Salary:</span> {job.fixedSalary ? (<span>{job.fixedSalary}</span>) : (<span>{job.salaryFrom} - {job.salaryTo}</span>)}</p>
-        <p>{user && user.role === "Employer" ? <></> : <a href={`/application/${job._id}`}>Apply Now</a>}</p>
+        
+         <p>{user && user.role === "Employer" ? <></> : <Link to={`/application/${job._id}`}>Apply Now</Link>}</p>
+
     </div>
        </div>
     </>
